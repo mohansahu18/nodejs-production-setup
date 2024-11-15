@@ -2,10 +2,10 @@ module.exports = {
     extends: ['@commitlint/config-conventional'],
     rules: {
         'type-enum': [2, 'always', ['feature', 'bug', 'build', 'style', 'refactor']],
-        'type-case': [2, 'always', 'lowercase'],  // Changed from 'lower' to 'lowercase'
+        'type-case': [2, 'always', 'lowercase'],
         'subject-case': [0],
         'type-empty': [2, 'never'],
-        'subject-empty': [2, 'never'],
+        'subject-empty': [0],
         'scope-case': [0],
         'header-max-length': [2, 'always', 100],
         'header-full-stop': [2, 'never', '.'],
@@ -13,8 +13,8 @@ module.exports = {
     },
     parserPreset: {
         parserOpts: {
-            headerPattern: /^(feature|bug|chore|docs|style|refactor|test|ci)(?:\/([a-z0-9-]+))?\s(.+)$/,
-            headerCorrespondence: ['type', 'scope', 'subject']
+            headerPattern: /^(feature|bug|build|style|refactor)\/([a-z0-9-]+)$/,
+            headerCorrespondence: ['type', 'scope']
         }
     }
 };
