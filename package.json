@@ -1,11 +1,11 @@
 {
   "name": "nodejs-production-setup",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "dist": "npx tsc",
-    "dev": "nodemon src/index.ts",
-    "start": "node dist/index.ts",
+    "dev": "nodemon src/server.ts",
+    "start": "node dist/server.ts",
     "prepare": "husky"
   },
   "author": "mohan",
